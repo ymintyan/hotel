@@ -1,0 +1,306 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 2000px;
+	font-family: Lato;
+}
+
+.navbar .navbar-brand {
+	font-family: Lato;
+	letter-spacing: 3px;
+	color: orange;
+	text-transform: uppercase;
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+nav + .container-fluid{
+	margin-top: -1.5em;
+}
+
+.navbar-brand:hover {
+	color: gray;
+}
+
+.glyphicon-chevron-left,
+.glyphicon-chevron-right {
+	color: orange;
+	font-size: 1em;
+}
+
+#slider  #myCarousel .carousel-inner img{
+	min-height: 200px;
+}
+
+#myCarousel .carousel-indicators li {
+	background: white;
+}
+
+#myCarousel .carousel-indicators li.active {
+	background: orange;
+}
+
+.carousel-caption {
+	font-size: 2em;
+	font-weight: bold;
+	top: 20%;
+	color: orange;
+}
+
+#apps {
+	margin-bottom: 10%;
+}
+
+#slider, 
+#about_apps, 
+.advantages,
+#contact_container {
+	position: relative;
+	margin-bottom: 2%;
+}
+
+#slider:after,
+#about_apps:after,
+.advantages:after,
+#contact_container:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: linear-gradient(to right, red 0%,yellow 50%,red 100%);
+}
+
+#about_apps {
+	background: #303043;
+	color: #fff;
+}
+
+#about_apps .panel-body {
+	color: #000
+}
+
+.menu #accordion div.panel {
+	margin-top: 0;
+	border: none;
+}
+
+#accordion * {
+	border-radius: 0;
+}
+
+.menu #accordion .panel:hover {
+	transform: scale(1.1);
+	border: 2px solid #fff;
+}
+
+.menu #accordion a {
+	text-decoration: none;
+	display: inline-block;
+	height: 3em;
+	padding-top: 1em;
+	font-size: 2em
+}
+
+.glyphicon-collapse-down,
+.glyphicon-collapse-up  {
+	margin-right: .5em;
+}
+
+#accordion .panel-heading {
+	background: rgba(255,160,0,.8);
+}
+
+.appartments .item {
+	padding: 0;
+	border: 1px solid #fff;
+	position: relative;
+	cursor: pointer;
+}
+
+.appartments .item img {
+	height: 300px;
+	width: 100%;
+}
+
+.appartments .item:after {
+	content: "";
+	display: block;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+	background: gray;
+	
+}
+
+.appartments .item:hover:after {
+	opacity: .8;
+}
+
+.hidden_block {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	font-size: 1.5em;
+	font-weight: bold;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+	z-index: 100;
+}
+
+.appartments .item:hover .hidden_block {
+	opacity: 1;
+	top: 20%;
+}
+
+.appartments .item:first-child {
+	border-left: none;
+}
+
+.appartments .item:last-child {
+	border-right: none;
+}
+
+.advantages {
+	margin: 2% 0;
+}
+
+.advantages .row {
+	padding: 3% 0;
+}
+
+.advantages .glyphicon {
+	font-size: 5em;
+	color: orange;
+}
+
+.glyphicon-usd {
+	margin-left: -.1em;
+}
+
+.advantages .glyphicon:hover {
+	color: red;
+	cursor: pointer;
+}
+
+.advantages p {
+	font-size: 2em;
+	margin-top: 1%;
+}
+
+#contact_container {
+	padding-bottom: 2.5%;
+	margin-bottom: 0;
+}
+
+#contact_container .btn {
+	margin-bottom: 3%;
+}
+
+#map {
+	height: 400px;
+}
+
+.footer {
+	background: lightgray;
+	padding-bottom: 1%;
+	padding-top: 1%;
+
+}
+
+.footer img {
+	height: 2em;
+	width: 2em;
+	margin: 5%;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.footer a:nth-child(1):hover img{
+	background: #4099ff;
+}
+
+.footer a:nth-child(2):hover img{
+	background: #d00;
+}
+
+.footer a:nth-child(3):hover img{
+	background: #3b5998;
+}
+
+.footer a {
+	color: black;
+	font-size: 1.2em;
+	padding-top: 10%;
+}
+
+.slideanim {visibility:hidden;}
+  
+.slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+}
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateX(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0%);
+    }
+  }
+
+
+@media screen and (max-width: 480px) {
+	.carousel-caption {
+		top: 10%;
+		font-size: 1em;
+	}
+
+	.menu #accordion a {
+		font-size: 1em;
+		font-weight: bold
+	}
+}
+
+.contact {
+	font-size: 1.5em;
+}
+
+.info.col-sm-4 {
+	padding-top: 1em;
+}
+
+.contact span {
+	margin-right: .5em
+}
